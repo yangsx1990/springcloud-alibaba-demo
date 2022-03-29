@@ -1,0 +1,31 @@
+server:
+  port: 20002
+
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 114.67.251.231:30002
+        namespace: 21a9da3c-3c93-4d1c-ab1e-6d0f95012a9c
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+
+logging:
+  level:
+    com.consumer.feign: debug
+
+feign:
+  client:
+    config:
+      default:
+        # 默认2s 连接超时时间
+        connectTimeout: 5000
+        # 默认5s 请求处理超时时间
+        readTimeout: 3000
+  sentinel:
+    enabled: true
+#  hystrix:
+#    enabled: true
