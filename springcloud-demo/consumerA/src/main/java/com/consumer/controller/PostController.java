@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/consumer")
 public class PostController {
 
-    @Resource
+//    @Resource
     MyFeign myFeign;
 
     @GetMapping("/hystrix")

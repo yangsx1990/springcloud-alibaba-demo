@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
  * @description
  * @date 2022-03-23
  */
-@FeignClient(value = "provider")
+//@FeignClient(value = "provider")
 public interface MyFeign {
 
     @GetMapping("/provider/get/singleParam")

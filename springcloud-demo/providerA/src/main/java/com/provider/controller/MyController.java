@@ -2,6 +2,8 @@ package com.provider.controller;
 
 import com.provider.model.Result;
 import com.provider.model.UserA;
+import com.provider.sharing.TestCache;
+import com.provider.sharing.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,5 +30,12 @@ public class MyController {
 //            e.printStackTrace();
 //        }
         return new Result(0,"success","providerA:"+param);
+    }
+
+    @GetMapping("sharing")
+    public void test(){
+        User user=new User();
+
+//        TestCache.testPointer(user);
     }
 }
